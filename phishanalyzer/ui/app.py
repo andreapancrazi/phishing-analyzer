@@ -5,6 +5,12 @@ import threading
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
+try:
+    from tkinterdnd2 import TkinterDnD, DND_FILES
+    HAS_DND = True
+except ImportError:
+    HAS_DND = False
+
 from ..config import ConfigManager
 from ..parsing.eml import EmailAnalyzer
 from ..parsing.msg_convert import msg_to_eml_bytes, MsgConversionError
@@ -17,8 +23,10 @@ from .tabs import (
 from .email_view_tab import EmailViewTab
 from .summary_tab import SummaryTab
 
+_AppBase = TkinterDnD.Tk if HAS_DND else tk.Tk
 
-class PhishAnalyzerApp(tk.Tk):
+
+class PhishAnalyzerApp(_AppBase):
     def __init__(self):
         super().__init__()
         self.title("PhishAnalyzer ◈ Email Forensics Tool")
@@ -37,6 +45,10 @@ class PhishAnalyzerApp(tk.Tk):
         self._current_file = None
         self._current_analyzer = None
         self._tabs = {}
+
+        if HAS_DND:
+            self.drop_target_register(DND_FILES)
+            self.dnd_bind("<<Drop>>", self._on_drop)
 
     def _setup_styles(self):
         style = ttk.Style(self)
@@ -205,6 +217,15 @@ class PhishAnalyzerApp(tk.Tk):
         )
         if path:
             self._analyze_file(path)
+
+    def _on_drop(self, event):
+        paths = self.tk.splitlist(event.data)
+        if not paths:
+            return
+        path = paths[0]
+        if not os.path.isfile(path):
+            return
+        self._analyze_file(path)
 
     def _analyze_file(self, path):
         self._set_status(f"Analyzing: {os.path.basename(path)}...")

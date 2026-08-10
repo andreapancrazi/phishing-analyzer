@@ -21,6 +21,7 @@ URGENCY_KEYWORDS = [
 ]
 
 _IP_LITERAL_URL_RE = re.compile(r'https?://(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
+_EMAIL_ADDR_RE = re.compile(r'[\w.+-]+@[\w.-]+')
 
 
 class Flag:
@@ -31,7 +32,11 @@ class Flag:
 
 
 def _domain_of(addr):
-    return addr.split("@")[-1].lower() if addr and "@" in addr else ""
+    """addr may be a bare address or a raw "Name <addr>" header value."""
+    if not addr:
+        return ""
+    m = _EMAIL_ADDR_RE.search(addr)
+    return m.group(0).split("@")[-1].lower() if m else ""
 
 
 def evaluate(results):
