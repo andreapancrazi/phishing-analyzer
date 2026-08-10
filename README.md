@@ -40,10 +40,19 @@ URL/attachment scanning.
 
 ## Windows build
 
-A portable `PhishAnalyzer.exe` is built automatically by
+A portable `PhishAnalyzer.exe` is built by
 [the GitHub Actions workflow](.github/workflows/build-windows.yml) on every
-push to `master`, or on demand from the Actions tab ("Run workflow"). Download
-it from the workflow run's artifacts.
+push to `master`, or on demand from the Actions tab ("Run workflow"). That
+run's build is downloadable from its Artifacts section, but artifacts expire
+after 90 days.
+
+For a permanent download, push a version tag — this also publishes the exe
+to the repo's Releases page:
+
+```
+git tag v1.0.0
+git push origin v1.0.0
+```
 
 ## Example
 
