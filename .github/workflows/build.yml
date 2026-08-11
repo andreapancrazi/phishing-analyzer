@@ -81,14 +81,14 @@ jobs:
           Name=PhishAnalyzer
           Exec=PhishAnalyzer
           Icon=phishanalyzer
-          Categories=Utility;Security;
+          Categories=Utility;Security;System;
           EOF
 
       - name: Build AppImage
         run: |
           wget -q https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod +x appimagetool-x86_64.AppImage
-          ./appimagetool-x86_64.AppImage --appimage-extract-and-run AppDir PhishAnalyzer-x86_64.AppImage
+          ARCH=x86_64 ./appimagetool-x86_64.AppImage --appimage-extract-and-run AppDir PhishAnalyzer-x86_64.AppImage
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
