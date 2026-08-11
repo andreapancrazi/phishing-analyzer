@@ -38,16 +38,16 @@ Open an `.eml` or `.msg` file from the UI or drag one onto the drop zone.
 VirusTotal lookups are optional — add an API key under Settings to enable
 URL/attachment scanning.
 
-## Windows build
+## Portable builds
 
-A portable `PhishAnalyzer.exe` is built by
-[the GitHub Actions workflow](.github/workflows/build-windows.yml) on every
-push to `master`, or on demand from the Actions tab ("Run workflow"). That
-run's build is downloadable from its Artifacts section, but artifacts expire
+[The GitHub Actions workflow](.github/workflows/build.yml) builds a portable
+`PhishAnalyzer.exe` (Windows) and `PhishAnalyzer-x86_64.AppImage` (Linux) on
+every push to `master`, or on demand from the Actions tab ("Run workflow").
+Both are downloadable from that run's Artifacts section, but artifacts expire
 after 90 days.
 
-For a permanent download, push a version tag — this also publishes the exe
-to the repo's Releases page:
+For a permanent download, push a version tag — this also publishes both
+builds to the repo's Releases page:
 
 ```
 git tag v1.0.0
