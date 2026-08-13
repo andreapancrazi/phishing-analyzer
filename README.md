@@ -101,6 +101,17 @@ try it yourself.
 
 ![Email View HTML Source](docs/screenshots/10_emailview_html.png)
 
+## Security
+
+- **CodeQL** static analysis on every push/PR to `master` and weekly
+  ([workflow](.github/workflows/codeql.yml))
+- **Dependabot** version updates for both Python dependencies and the pinned
+  GitHub Actions ([config](.github/dependabot.yml))
+- **GitHub secret scanning** (enable under Settings → Code security)
+- All GitHub Actions are pinned to a full commit SHA (not a floating tag) and
+  run with least-privilege `permissions:`; the workflow that builds release
+  binaries is checked with [zizmor](https://docs.zizmor.sh/)
+
 ## Notes
 
 This is a triage aid, not a verdict engine. The heuristic flags point at
